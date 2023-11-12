@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  
+
   "folke/which-key.nvim",
   { "folke/neoconf.nvim", cmd = "Neoconf" },
   "folke/neodev.nvim",
@@ -26,12 +26,25 @@ require("lazy").setup({
 
   "nvim-treesitter/nvim-treesitter",
 
-  { 
-    "nvim-telescope/telescope.nvim", 
+  {
+    "nvim-telescope/telescope.nvim",
     dependencies = {
       {"tsakirist/telescope-lazy.nvim"},
       {"nvim-lua/plenary.nvim"},
     }
-  }
+  },
+
+  {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  },
+
+  "hrsh7th/nvim-cmp",
+  "hrsh7th/cmp-nvim-lsp",
+
+  "L3MON4D3/LuaSnip",
+  "saadparwaiz1/cmp_luasnip",
+  "rafamadriz/friendly-snippets"
 
 })

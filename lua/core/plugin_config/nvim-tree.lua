@@ -4,3 +4,9 @@ vim.g.loaded_netrwPlugin = 1
 require("nvim-tree").setup()
 
 vim.keymap.set("n", "<c-n>", ":NvimTreeFindFileToggle<CR>")
+
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		vim.cmd("NvimTreeFindFileToggle")
+	end,
+})
