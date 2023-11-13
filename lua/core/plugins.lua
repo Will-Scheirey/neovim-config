@@ -1,4 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
@@ -17,7 +18,7 @@ require("lazy").setup({
   { "folke/neoconf.nvim", cmd = "Neoconf" },
   "folke/neodev.nvim",
 
-  "navarasu/onedark.nvim",
+  "ellisonleao/gruvbox.nvim",
 
   "nvim-tree/nvim-tree.lua",
   "nvim-tree/nvim-web-devicons",
